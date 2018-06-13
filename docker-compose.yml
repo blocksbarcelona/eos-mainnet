@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  seed:
+    build:
+      context: seed
+    mem_limit: 10000m
+    image: lyddium/eos-mainnet
+    command: /opt/eosio/bin/seed.sh
+    hostname: seed
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+      - "9876"
+    volumes:
+      - eos-mainnet-seed-data-volume:/opt/eosio/bin/data-dir
+
+volumes:
+  eos-mainnet-seed-data-volume:
+    external: true
