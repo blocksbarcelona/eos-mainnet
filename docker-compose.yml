@@ -6,7 +6,6 @@ services:
       context: seed
     mem_limit: 10000m
     image: lyddium/eos-mainnet-seed
-    command: /opt/eosio/bin/seed.sh
     hostname: seed
     ports:
       - 8888:8888

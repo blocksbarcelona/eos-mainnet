@@ -7,8 +7,7 @@ else
 	/opt/eosio/bin/nodeosd.sh --data-dir /opt/eosio/bin/data-dir -e
 fi
 
-if [ $? -eq 2 ]
-then
+if [ $? -eq 2 ] then
    echo "**** Running seed + replay-blockchain ****"
 	 /opt/eosio/bin/nodeosd.sh --data-dir /opt/eosio/bin/data-dir -e ---replay-blockchain --hard-replay-blockchain
 fi

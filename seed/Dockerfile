@@ -10,3 +10,5 @@ RUN chmod +x /opt/eosio/bin/genesis.sh
 RUN chmod +x /opt/eosio/bin/seed.sh
 
 COPY config.ini /
+
+ENTRYPOINT /opt/eosio/bin/seed.sh
