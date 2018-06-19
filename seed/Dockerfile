@@ -11,4 +11,4 @@ RUN chmod +x /opt/eosio/bin/seed.sh
 
 COPY config.ini /
 
-ENTRYPOINT /opt/eosio/bin/seed.sh
+ENTRYPOINT ["sh", "-x /opt/eosio/bin/seed.sh"]
