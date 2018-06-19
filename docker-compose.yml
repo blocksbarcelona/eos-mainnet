@@ -10,12 +10,12 @@ services:
     ports:
       - 8888:8888
       - 9876:9876
+      - 4321:4321
     expose:
       - "8888"
       - "9876"
     volumes:
       - eos-mainnet-seed-data-volume:/opt/eosio/bin/data-dir
-
 volumes:
   eos-mainnet-seed-data-volume:
     external: true
