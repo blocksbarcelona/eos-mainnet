@@ -12,8 +12,7 @@ if [ $? -eq 2 ] then
 	 /opt/eosio/bin/nodeosd.sh --data-dir /opt/eosio/bin/data-dir -e ---replay-blockchain --hard-replay-blockchain
 fi
 
-if [ $? -eq 2 ]
-then
+if [ $? -eq 2 ] then
    echo "**** Hard seed blockchain recovery ****"
 	 rm -rf /opt/eosio/bin/data-dir/blocks/
 	 rm -rf /opt/eosio/bin/data-dir/state/
